@@ -22,3 +22,4 @@ if __name__ == "__main__":
     main()
     fin = time.time()
     print(f"\nTiempo total: {fin - inicio:.2f} segundos")
+    
