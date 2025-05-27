@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jean R. Castillo\\Desktop\\Computacion Paralela y Distribuida\\Semaforo\\SincronizacionYSemaforo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE0481E9-78A0-4A13-9CC9-63FD664C3BDA}|SincronizacionYSemaforo\\SincronizacionYSemaforo.vcxproj|C:\\Users\\Jean R. Castillo\\Desktop\\Computacion Paralela y Distribuida\\Semaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FE0481E9-78A0-4A13-9CC9-63FD664C3BDA}|SincronizacionYSemaforo\\SincronizacionYSemaforo.vcxproj|solutionrelative:SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SincronizacionYSemaforo.cpp",
+              "DocumentMoniker": "C:\\Users\\Jean R. Castillo\\Desktop\\Computacion Paralela y Distribuida\\Semaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp",
+              "RelativeDocumentMoniker": "SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp",
+              "ToolTip": "C:\\Users\\Jean R. Castillo\\Desktop\\Computacion Paralela y Distribuida\\Semaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp",
+              "RelativeToolTip": "SincronizacionYSemaforo\\SincronizacionYSemaforo.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-27T02:23:45.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
