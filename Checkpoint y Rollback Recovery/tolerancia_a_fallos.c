@@ -1,68 +1,20 @@
-#include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <mpi.h>
 
-#define CHECKPOINT_FILE_PREFIX "checkpoint_rank_"
 #define MAX_ITER 20
-#define CHECKPOINT_INTERVAL 5
-#define FAILURE_ITER 10 // Simula fallo en esta iteración
+#define CHECKPOINT_ITER 5
+#define FAIL_AT_ITER 10
 
 typedef struct {
     int iter;
-    int suma_parcial;
+    int suma;
 } Estado;
 
-// Función para generar nombre de archivo del checkpoint
-void get_checkpoint_filename(int rank, char *filename) {
-    sprintf(filename, "%s%d.dat", CHECKPOINT_FILE_PREFIX, rank);
-}
-
-// Guarda el estado en un archivo local
-void guardar_checkpoint(Estado *estado, int rank) {
-    char filename[100];
-    get_checkpoint_filename(rank, filename);
-    FILE *f = fopen(filename, "wb");
-    if (f == NULL) {
-        perror("Error guardando checkpoint");
-        MPI_Abort(MPI_COMM_WORLD, 1);
-    }
-    fwrite(estado, sizeof(Estado), 1, f);
-    fclose(f);
-    printf("[Rank %d] Checkpoint guardado en iteracion %d\n", rank, estado->iter);
-}
-
-// Carga el estado desde archivo si existe
-int cargar_checkpoint(Estado *estado, int rank) {
-    char filename[100];
-    get_checkpoint_filename(rank, filename);
-    FILE *f = fopen(filename, "rb");
-    if (f == NULL) {
-        return 0; // No hay checkpoint
-    }
-    fread(estado, sizeof(Estado), 1, f);
-    fclose(f);
-    printf("[Rank %d] Checkpoint cargado desde iteracion %d\n", rank, estado->iter);
-    return 1;
-}
-
-// Simula cómputo simple: suma de índice local
-void computo(Estado *estado, int rank) {
-    estado->suma_parcial += rank; // Simulación simple
-}
-
-// Simula fallo en cierta iteración
-void simular_fallo(int iter, int rank) {
-    if (iter == FAILURE_ITER && rank == 1) { // Solo proceso 1 falla
-        printf("[Rank %d] Simulando fallo intencional en iteracion %d\n", rank, iter);
-        exit(1);
-    }
-}
-
-int main(int argc, char **argv) {
-    Estado estado = {0, 0};
+int main(int argc, char** argv) {
     int rank, size;
+    Estado estado = {0, 0};
+    char filename[100];
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -70,35 +22,46 @@ int main(int argc, char **argv) {
 
     if (size < 3) {
         if (rank == 0)
-            fprintf(stderr, "Se requieren al menos 3 procesos.\n");
+            printf("Este programa requiere al menos 3 procesos.\n");
         MPI_Abort(MPI_COMM_WORLD, 1);
     }
 
-    // Cargar checkpoint si existe
-    int recuperado = cargar_checkpoint(&estado, rank);
-    if (!recuperado) {
-        estado.iter = 0;
-        estado.suma_parcial = 0;
+    sprintf(filename, "checkpoint_rank%d.dat", rank);
+
+    // Intentar recuperar el estado desde archivo
+    FILE* f = fopen(filename, "rb");
+    if (f) {
+        fread(&estado, sizeof(Estado), 1, f);
+        fclose(f);
+        printf("[Rank %d] Checkpoint encontrado. Recuperando estado: iter=%d, suma=%d\n", rank, estado.iter, estado.suma);
+    } else {
+        printf("[Rank %d] Sin checkpoint previo. Iniciando desde cero.\n", rank);
     }
 
-    for (int i = estado.iter; i < MAX_ITER; i++) {
+    // Sincronizacion antes de comenzar a trabajar
+    MPI_Barrier(MPI_COMM_WORLD);
+
+    for (int i = estado.iter + 1; i <= MAX_ITER; ++i) {
         estado.iter = i;
+        estado.suma += 1;
 
-        computo(&estado, rank);
-        printf("[Rank %d] Iteracion %d, suma_parcial = %d\n", rank, i, estado.suma_parcial);
+        printf("[Rank %d] Iteracion %d, suma=%d\n", rank, estado.iter, estado.suma);
 
-        simular_fallo(i, rank);
-
-        if (i % CHECKPOINT_INTERVAL == 0 && i != 0) {
-            MPI_Barrier(MPI_COMM_WORLD); // Sincronización global
-            guardar_checkpoint(&estado, rank);
+        if (estado.iter == CHECKPOINT_ITER) {
+            FILE* fout = fopen(filename, "wb");
+            fwrite(&estado, sizeof(Estado), 1, fout);
+            fclose(fout);
+            printf("[Rank %d] Checkpoint guardado en iteracion %d\n", rank, estado.iter);
         }
 
-        sleep(1); // Para observar el progreso lentamente
+        // Simulacion de fallo intencional
+        if (rank == 1 && estado.iter == FAIL_AT_ITER) {
+            printf("[Rank %d] Simulando fallo intencional en iteracion %d\n", rank, estado.iter);
+            exit(1);  // Finaliza abruptamente para simular error
+        }
     }
 
-    printf("[Rank %d] Finalizando normalmente. Suma final = %d\n", rank, estado.suma_parcial);
-
+    printf("[Rank %d] Proceso finalizado correctamente.\n", rank);
     MPI_Finalize();
     return 0;
 }
