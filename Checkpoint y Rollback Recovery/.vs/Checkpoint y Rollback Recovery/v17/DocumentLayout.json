@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jean R. Castillo\\Desktop\\Universidad\\9no Cuatrimestre\\Computacion Paralela y Distribuida\\Checkpoint y Rollback Recovery\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jean R. Castillo\\Desktop\\Universidad\\9no Cuatrimestre\\Computacion Paralela y Distribuida\\Checkpoint y Rollback Recovery\\tolerancia_a_fallos.c||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tolerancia_a_fallos.c||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tolerancia_a_fallos.c",
+              "DocumentMoniker": "C:\\Users\\Jean R. Castillo\\Desktop\\Universidad\\9no Cuatrimestre\\Computacion Paralela y Distribuida\\Checkpoint y Rollback Recovery\\tolerancia_a_fallos.c",
+              "RelativeDocumentMoniker": "tolerancia_a_fallos.c",
+              "ToolTip": "C:\\Users\\Jean R. Castillo\\Desktop\\Universidad\\9no Cuatrimestre\\Computacion Paralela y Distribuida\\Checkpoint y Rollback Recovery\\tolerancia_a_fallos.c",
+              "RelativeToolTip": "tolerancia_a_fallos.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-07-21T00:25:17.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
