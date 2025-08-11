@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tuempresa.actorservice.AppTest" time="0.042" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda\target\test-classes;C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda\target\classes;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-actor-typed_2.13\2.8.5\akka-actor-typed_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.8.5\akka-actor_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\config\1.4.2\config-1.4.2.jar;C:\Users\Jean R. Castillo\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.0\scala-java8-compat_2.13-1.0.0.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.8.5\akka-slf4j_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Jean R. Castillo\.m2\repository\com\amazonaws\aws-lambda-java-core\1.2.1\aws-lambda-java-core-1.2.1.jar;C:\Users\Jean R. Castillo\.m2\repository\com\amazonaws\aws-lambda-java-events\3.11.0\aws-lambda-java-events-3.11.0.jar;C:\Users\Jean R. Castillo\.m2\repository\joda-time\joda-time\2.6\joda-time-2.6.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.2\jackson-databind-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.2\jackson-annotations-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.2\jackson-core-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Jean R. Castillo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Jean R. Castillo\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Santo_Domingo"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\Jean R. Castillo\AppData\Local\Temp\surefire14537037952232725584\surefirebooter-20250810222229870_3.jar C:\Users\Jean R. Castillo\AppData\Local\Temp\surefire14537037952232725584 2025-08-10T22-22-29_721-jvmRun1 surefire-20250810222229870_1tmp surefire_0-20250810222229870_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda\target\test-classes;C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda\target\classes;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-actor-typed_2.13\2.8.5\akka-actor-typed_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.8.5\akka-actor_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\config\1.4.2\config-1.4.2.jar;C:\Users\Jean R. Castillo\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.0\scala-java8-compat_2.13-1.0.0.jar;C:\Users\Jean R. Castillo\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.8.5\akka-slf4j_2.13-2.8.5.jar;C:\Users\Jean R. Castillo\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Jean R. Castillo\.m2\repository\com\amazonaws\aws-lambda-java-core\1.2.1\aws-lambda-java-core-1.2.1.jar;C:\Users\Jean R. Castillo\.m2\repository\com\amazonaws\aws-lambda-java-events\3.11.0\aws-lambda-java-events-3.11.0.jar;C:\Users\Jean R. Castillo\.m2\repository\joda-time\joda-time\2.6\joda-time-2.6.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.2\jackson-databind-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.2\jackson-annotations-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.2\jackson-core-2.15.2.jar;C:\Users\Jean R. Castillo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Jean R. Castillo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Jean R. Castillo\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Jean R. Castillo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jean R. Castillo\AppData\Local\Temp\surefire14537037952232725584\surefirebooter-20250810222229870_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7-58"/>
+    <property name="user.name" value="Jean R. Castillo"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Jean R. Castillo\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\JEANR~1.CAS\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="C:\Users\Jean R. Castillo\Desktop\Universidad\9no Cuatrimestre\Computacion Paralela y Distribuida\Modelo de Actores\actor-lambda"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.15.6-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\platform-tools;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\tools;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\Java\jdk-23\bin;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\emulator;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\platform-tools;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\tools;C:\Users\Jean R. Castillo\AppData\Local\Android\Sdk\tools\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Users\Jean R. Castillo\AppData\Local\nvm;C:\nvm4w\nodejs;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.11\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\Jean R. Castillo\AppData\Local\Microsoft\WindowsApps;C:\Users\Jean R. Castillo\AppData\Local\Programs\Python\Python311;C:\Users\Jean R. Castillo\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\Jean R. Castillo\AppData\Roaming\npm;C:\Users\Jean R. Castillo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Jean R. Castillo\.dotnet\tools;C:\Users\Jean R. Castillo\go\bin;C:\mingw64\bin;C:\Program Files (x86)\Microsoft SDKs\MPI\Include;C:\Users\Jean R. Castillo\FlutterSDK\flutter\bin;C:\Android\cmdline-tools\latest\bin;C:\Android\platform-tools;C:\Users\Jean R. Castillo\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64;C:\Program Files\Oracle\VirtualBox\;C:\hadoop\bin;;c:\Users\Jean R. Castillo\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.2+7-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testApp" classname="com.tuempresa.actorservice.AppTest" time="0.003"/>
+</testsuite>

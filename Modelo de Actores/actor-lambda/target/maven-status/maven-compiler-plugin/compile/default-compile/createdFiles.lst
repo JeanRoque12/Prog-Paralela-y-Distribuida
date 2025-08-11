@@ -1,0 +1,11 @@
+com\tuempresa\actorservice\Supervisor.class
+com\tuempresa\actorservice\LambdaHandler.class
+com\tuempresa\actorservice\Task$Result.class
+com\tuempresa\actorservice\Task$Sum.class
+com\tuempresa\actorservice\Task$Command.class
+com\tuempresa\actorservice\Task.class
+com\tuempresa\actorservice\Command.class
+com\tuempresa\actorservice\Worker.class
+com\tuempresa\actorservice\LambdaHandler$Input.class
+com\tuempresa\actorservice\TaskActor.class
+com\tuempresa\actorservice\LambdaHandler$Output.class
